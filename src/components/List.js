@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import Card from "./Card";
 
-const List = (props) => {
-
-const [data, setData] = useState(props.data);
-
+const List = ({ data, onDelete, onStatusDone }) => {
   return (
-    <div className="h-24">   
-    {data.map((d) =>(
-        <h1>
-            <Card val = {d} />
-        </h1>
-    ))}
-        
+    <div>
+      {data.map((d) => (
+        <Card
+          key={d.id}
+          val={d}
+          onDelete={onDelete}
+          onStatusDone={onStatusDone}
+        />
+      ))}
     </div>
-  )
+  );
 };
+
 export default List;
