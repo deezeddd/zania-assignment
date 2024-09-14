@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const AddButton = ({ addTask }) => {
   const [task, setTask] = useState({
-    title: "", // Changed from 'name' to 'title'
+    title: "", 
     category: "",
     description: "",
   });
@@ -28,11 +28,11 @@ const AddButton = ({ addTask }) => {
     <>
       <form onSubmit={handleSubmit}>
         <div>
-          <h1>Title</h1> {/* Changed label from 'Name' to 'Title' */}
+          <h1>Title</h1> 
           <input
             className="border-2 m-2"
             type="text"
-            name="title" // Changed name from 'name' to 'title'
+            name="title" 
             value={task.title}
             onChange={handleChange}
           />
